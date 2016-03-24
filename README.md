@@ -115,19 +115,17 @@
   }
   ```
 
-### PUT /locations/{location_id}/thermostats/{thermostat_id} - Change settings on a thermostat
+### PUT /locations/{location_id}/thermostats/{thermostat_id} - Change settings on a thermostat. Some or all fields
 ##### responses
 - 404 Not Found
 - 400 Bad Request - invalid data
 - 200 OK - application/json
   ```
   {
-    "thermostat": {
-      "heatSetPoint": 100,
-      "fanMode": "off",
-      "name": "hall",
-      "coolSetPoint": 20,
-      "mode": "off"
-    }
+    "heatSetPoint": 100,
+    "fanMode": "off",
+    "name": "hall",
+    "coolSetPoint": 20,
+    "mode": "off"
   }
   ```
