@@ -59,4 +59,4 @@ def badRequest(error):
     abort(400, {'error': error})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8080)
