@@ -4,6 +4,7 @@
 ##### responses
 - 404 Not Found
 - 200 OK - application/json
+
   ```
   {
     "locations": [
@@ -20,6 +21,7 @@
 ##### responses
 - 404 Not Found
 - 200 OK - application/json
+
   ```
   {
     "location": {
@@ -35,6 +37,7 @@
 ##### responses
 - 404 Not Found
 - 200 OK - application/json
+
   ```
   {
     "thermostats": [
@@ -64,6 +67,7 @@
 ##### responses
 - 404 Not Found
 - 200 OK - application/json
+
   ```
   {
     "thermostat": {
@@ -79,10 +83,23 @@
   ```
 
 ### PUT /locations/{location_id}/thermostats/{thermostat_id} - Change settings on a thermostat. Some or all fields
+##### body
+
+ ```
+  {
+    "heatSetPoint": 100,
+    "fanMode": "off",
+    "name": "hall",
+    "coolSetPoint": 20,
+    "mode": "off"
+  }
+  ```
+
 ##### responses
 - 404 Not Found
 - 400 Bad Request - invalid data
 - 200 OK - application/json
+
   ```
   {
     "heatSetPoint": 100,
