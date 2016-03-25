@@ -37,7 +37,7 @@ class apiLocationThermostat:
             return locationNotFound(location_id)
         t = l[0].getThermostat(therm_id)
         if len(t) == 0:
-            return thermostatNotFound(location_id)
+            return thermostatNotFound(therm_id, location_id)
         web.header('Content-Type', 'application/json')
         return json.dumps({'thermostat': t[0].serialize()})
 

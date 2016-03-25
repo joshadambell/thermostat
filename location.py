@@ -85,16 +85,16 @@ class thermostat:
         err = self.validateTemperatures(therm)
         if err:
             return err
-        if therm.get('fanMode') not in self.fanModes:
+        if therm.get('fanMode') and therm.get('fanMode') not in self.fanModes:
             return 'unknown fanMode'
-        if therm.get('mode') not in self.modes:
+        if therm.get('mode') and therm.get('mode') not in self.modes:
             return 'unknown mode'
 
     def validateTemperatures(self, therm):
         print therm.get('coolSetPoint')
-        if therm.get('coolSetPoint') < self.lowTemp or therm.get('coolSetPoint') > self.highTemp:
+        if therm.get('coolSetPoint') and (therm.get('coolSetPoint') < self.lowTemp or therm.get('coolSetPoint') > self.highTemp):
             return "invalid cool temperature set point"
-        if therm.get('heatSetPoint') < self.lowTemp or therm.get('heatSetPoint') > self.highTemp:
+        if therm.get('heatSetPoint') and (therm.get('heatSetPoint') < self.lowTemp or therm.get('heatSetPoint') > self.highTemp):
             return "invalid heat temperature set point"
         return
 
