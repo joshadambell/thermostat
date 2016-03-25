@@ -1,3 +1,5 @@
+import random
+
 locations = []
 
 def addLocation(location):
@@ -33,7 +35,7 @@ class location:
         return {
             'id': self.id,
             'name': self.name,
-            'thermostats': [thermostat.serialize() for thermostat in self.thermostats] ,
+            'thermostats': len(self.thermostats) ,
         }
 
 class thermostat:
@@ -98,6 +100,7 @@ class thermostat:
 
 
     def serialize(self):
+        self.currentTemp = random.randint(60,80)
         return {
             'id': self.id,
             'name': self.name,

@@ -52,7 +52,7 @@ class apiLocationThermostat:
         if err:
             raise web.badrequest(message=err)
         web.header('Content-Type', 'application/json')
-        return json.dumps({'thermostat': updatedT.serialize()})
+        return json.dumps(updatedT.serialize())
 
 
 # Error messages

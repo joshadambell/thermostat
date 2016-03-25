@@ -45,7 +45,7 @@ def updateTherm(location_id, therm_id):
     updatedT, err = t[0].updateTherm(request.json)
     if err:
         badRequest(err)
-    return jsonify({'thermostat': updatedT.serialize()})
+    return jsonify(updatedT.serialize())
 
 # Error messages
 

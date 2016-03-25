@@ -10,26 +10,7 @@
       {
         "id": "1",
         "name": "home",
-        "thermostats": [
-          {
-            "heatSetPoint": 100,
-            "fanMode": "off",
-            "name": "hall",
-            "coolSetPoint": 20,
-            "mode": "off",
-            "currentTemp": 70,
-            "id": "100"
-          },
-          {
-            "heatSetPoint": 100,
-            "fanMode": "off",
-            "name": "living room",
-            "coolSetPoint": 20,
-            "mode": "off",
-            "currentTemp": 70,
-            "id": "101"
-          }
-        ]
+        "thermostats": 2
       }
     ]
   }
@@ -44,25 +25,7 @@
     "location": {
       "id": "1",
       "name": "home",
-      "thermostats": [
-        {
-          "heatSetPoint": 100,
-          "fanMode": "off",
-          "name": "hall",
-          "coolSetPoint": 20,
-          "mode": "off",
-          "currentTemp": 70,
-          "id": "100"
-        },
-        {
-          "heatSetPoint": 100,
-          "fanMode": "off",
-          "name": "living room",
-          "coolSetPoint": 20,
-          "mode": "off",
-          "currentTemp": 70,
-          "id": "101"
-        }
+      "thermostats": 2
       ]
     }
   }
