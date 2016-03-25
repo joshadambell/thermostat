@@ -35,7 +35,7 @@ class location:
         return {
             'id': self.id,
             'name': self.name,
-            'thermostats': len(self.thermostats) ,
+            'thermostats': [thermostat.serialize() for thermostat in self.thermostats],
         }
 
 class thermostat:
